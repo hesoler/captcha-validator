@@ -43,7 +43,7 @@ function generateCaptcha(letterCount) {
     drawPattern(ctx, canvas.width, canvas.height);
     drawWarpedText(ctx, canvas, captchaText);
     $(canvas).data('captcha', captchaText);
-};
+}
 
 // Función para generar un color aleatorio
 function generateText(letterCount) {
@@ -54,7 +54,7 @@ function generateText(letterCount) {
         captchaText += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     return captchaText;
-};
+}
 
 // Función para generar un color aleatorio
 function generateRandomColor() {
@@ -64,7 +64,7 @@ function generateRandomColor() {
         color += letras[Math.floor(Math.random() * 16)];
     }
     return color;
-};
+}
 
 // Función para dibujar el patrón
 function drawPattern(ctx, width, height) {
@@ -83,7 +83,7 @@ function drawPattern(ctx, width, height) {
         }
         ctx.stroke();
     }
-};
+}
 
 function drawWarpedText(ctx, canvas, texto) {
     ctx.font = '30px Arial';
@@ -104,7 +104,7 @@ function drawWarpedText(ctx, canvas, texto) {
         ctx.fillText(texto[i], 0, 0); // Dibujar la letra
         ctx.restore(); // Restaurar el estado del contexto
     }
-};
+}
 
 function validateCaptcha() {
     let inputEl = document.getElementById('input');
@@ -120,9 +120,9 @@ function validateCaptcha() {
         alert("Invalid CAPTCHA! ❌")
         generateCaptcha(letterCount);
     }
-};
+}
 
 function keyPress(event) {
     let charCode = event.which || event.keyCode;
-    if (charCode == 13) validateCaptcha();
-};
+    if (charCode === 13) validateCaptcha();
+}
