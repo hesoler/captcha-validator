@@ -25,7 +25,7 @@ body {
   height: 28px;
   right: -3px;
   border: 1px solid darkgray;
-  border-radius: 0px;
+  border-radius: 0;
 }
 .captcha-refresh:hover {
   border: 1px solid rgb(224, 212, 212);
