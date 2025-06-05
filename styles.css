@@ -50,7 +50,7 @@ body {
   text-align: center;
   color: #20736c;
   font-weight: bold;
-  font-family: Arial, verdana;
+    font-family: Arial, verdana, serif;
 }
 
 .captcha-input-group button {
